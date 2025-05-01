@@ -1,0 +1,17 @@
+
+
+
+<form action='' method='POST'>
+    {% csrf_token %}
+
+    {% for message in messages %}
+    <p>{{message}}</p>
+    {% endfor %}
+
+    <h3>Name😊</h3>
+    <input type="text" name="username" placeholder="Enter fullname">
+
+    <h3>Email:</h3>
+    <input type="email" name="email" placeholder="enter your email here..."><br>
+    <input type="submit" value="Sign Up">
+</form>

@@ -1,0 +1,20 @@
+{% if user.is_authenticated %}
+<h1 style="text-align: center; color: dodgerblue; font-size: 3.5em;">
+    Welcome, {{user.username}}
+</h1>
+{% endif %}
+
+
+{% for post in posts reversed %}
+    <div>
+        <h1>
+            {{post.title}}
+        </h1>
+        <h4>
+            {{post.body|truncatewords:30}}
+        </h4>
+        <p>
+            {{post.created_at}}
+        </p>
+    </div>
+{% endfor %}
